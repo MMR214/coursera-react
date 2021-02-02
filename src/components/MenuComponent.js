@@ -3,15 +3,16 @@ import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } 
 import { Link } from 'react-router-dom';
 
     function RenderMenuItem ({dish, onClick}) {
-        return (
-            <Link to={`/menu/${dish.id}`}>
+        return (   
             <Card>
-                <CardImg width="100%" src={dish.image} alt={dish.name} />
-                <CardImgOverlay>
-                    <CardTitle>{dish.name}</CardTitle>
-                </CardImgOverlay>
+                <Link to={`/menu/${dish.id}`}>
+                    <CardImg width="100%" src={dish.image} alt={dish.name} />
+                    <CardImgOverlay>
+                        <CardTitle>{dish.name}</CardTitle>
+                    </CardImgOverlay>
+                </Link>
             </Card>
-            </Link>
+            
         );
     }
 
